@@ -9,9 +9,8 @@ const RegisterForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.currentTarget;
-        console.log(form)
         dispatch(register({
-            username: form.elements.username.value,
+            name: form.elements.name.value,
             email: form.elements.email.value,
             password: form.elements.password.value,
         }))
@@ -20,13 +19,13 @@ const RegisterForm = () => {
     return (
         <FormStyled onSubmit={handleSubmit} autoComplete="off">
             <Lable htmlFor="name">Username 
-                <FieldStyled type="username" name="username" />
+                <FieldStyled type="name" name="name" placeholder="Enter your name" />
             </Lable>
             <Lable htmlFor="name">Email 
-                <FieldStyled type="email" name="email" />
+                <FieldStyled type="email" name="email" placeholder="Enter your email" />
             </Lable>
             <Lable htmlFor="name">Password 
-                <FieldStyled type="password" name="password" />
+                <FieldStyled type="password" name="password" placeholder="Enter your password"/>
             </Lable>
             <RegisterBtn type="submit">Register</RegisterBtn>
         </FormStyled>
