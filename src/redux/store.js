@@ -11,7 +11,6 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-// import { persistedContactsReducer } from './contactsSlice';
 import { filterReducer } from './filterSlice';
 import { authReducer } from '../redux/Auth/authSlice';
 

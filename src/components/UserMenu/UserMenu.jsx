@@ -6,7 +6,9 @@ import { UserMenuContainer, UserMenuLogOutBtn, UserMenuName } from "./UserMenu.s
 const UserMenu = () => {
     const dispatch = useDispatch();
     const { user } = useAuth();
- const handleLogOut = () => dispatch(logOut())
+    const handleLogOut = () => {
+        dispatch(logOut())
+    };
     return (
         <UserMenuContainer>
             <UserMenuName>Welcome, {user}</UserMenuName>

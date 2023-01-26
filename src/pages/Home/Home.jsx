@@ -1,9 +1,9 @@
-
+import {ContainerHome, TitleHome} from './Home.styled'
 const Home = () => {
     return (
-        <div>
-            <h1>Welcome to the PhoneBook manager</h1>
-        </div>
+        <ContainerHome>
+            <TitleHome>Welcome to the PhoneBook manager</TitleHome>
+        </ContainerHome>
     )
 }
 export default Home;

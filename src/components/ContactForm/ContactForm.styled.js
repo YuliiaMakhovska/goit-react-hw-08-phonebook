@@ -16,11 +16,12 @@ export const Label = styled.label`
   font-size: 18px;
   cursor: pointer;
   p {
-    margin: 10px;
+    margin: 8px;
+    color: red;
   }
 `;
 export const FieldStyled = styled(Field)`
-  margin: 10px;
+  margin-top: 10px;
   height: 25px;
   width: 220px;
   border: 1px solid #030e1845;
