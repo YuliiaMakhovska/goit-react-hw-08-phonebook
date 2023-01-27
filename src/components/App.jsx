@@ -6,7 +6,7 @@ import { refreshUser } from 'redux/Auth/auth-operations';
 import useAuth from '../hooks/useAuth'
 import RestrictedRoute from '../components/RestrictedRoute';
 import PrivateRoute from '../components/PrivateRoute';
-// import Loader from 'components/Loader/Loader';
+import Loader from 'components/Loader/Loader';
 
 const Home = lazy(() => import ('../pages/Home/Home') )
 const Login = lazy(() => import ('../pages/Login/Login') )
@@ -23,8 +23,9 @@ export const App = () => {
   useEffect(() => {
     dispatch(refreshUser())
   }, [dispatch]);
-  return isRefreshing ? (<b>Refreshing user...</b>) :
- (
+
+  return isRefreshing ? (<Loader />) :
+  (
     <Routes>
       <Route path="/" element={<Layout />} >
         <Route index element={<Home />} />
