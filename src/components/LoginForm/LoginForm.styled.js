@@ -4,7 +4,7 @@ export const LogInForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 400px;
+  max-width: 450px;
   margin: 20px auto;
   padding: 30px;
   border: 1px solid #e0b9b9;
@@ -25,7 +25,7 @@ export const LogInLabel = styled.label`
 export const LoginField = styled.input`
   margin-top: 10px;
   height: 25px;
-  width: 250px;
+  width: 300px;
   border: 3px solid #4c43cd;
   border-radius: 5px;
   padding: 10px;

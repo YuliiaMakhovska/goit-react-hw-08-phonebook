@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import back from '../../images/back.png';
 
-export const RegisterContainer = styled.div`
+export const LoginContainer = styled.div`
   margin: 0 auto;
   background-image: url(${back});
   background-size: cover;

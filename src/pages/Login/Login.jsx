@@ -1,10 +1,10 @@
 import LoginForm from "../../components/LoginForm/LoginForm"
-
+import {LoginContainer} from './Login.styled'
 const Login = () => {
     return (
-        <div>
+        <LoginContainer>
             <LoginForm />
-        </div>
+        </LoginContainer>
     )
 }
 export default Login;
