@@ -1,10 +1,12 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../redux/Auth/auth-operations";
 import { FormStyled, Lable, FieldStyled, RegisterBtn } from "./RegisterForm.styled";
-
+// import { Report } from 'notiflix/build/notiflix-report-aio';
+import authSelectors from "redux/Auth/auth-selectors";
 
 const RegisterForm = () => {
     const dispatch = useDispatch()
+    const error = useSelector(authSelectors.selectError)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -13,7 +15,7 @@ const RegisterForm = () => {
             name: form.elements.name.value,
             email: form.elements.email.value,
             password: form.elements.password.value,
-        }))
+        })) && !error &&
         form.reset()
     }
     return (
