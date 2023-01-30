@@ -8,8 +8,6 @@ const contactsSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
-    isLoadingAdd: false,
-    isLoadingDelete: false,
   },
   extraReducers: builder =>
     builder

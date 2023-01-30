@@ -1,12 +1,13 @@
-
+import Loader from 'components/Loader/Loader';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectFilter, selectItems } from 'redux/selectors';
-import { List } from './ContactsList.styled';
+import { selectFilter, selectItems, selectIsLoading } from 'redux/selectors';
+import { List, ListDelBtn, ListItem } from './ContactsList.styled';
 import { deleteContact } from 'redux/operations';
 
 const ContactsList = () => {
   const contacts = useSelector(selectItems);
   const filter = useSelector(selectFilter)
+  const isLoading = useSelector(selectIsLoading)
   const dispatch = useDispatch();
 
     const filteredContacts = !filter
@@ -18,11 +19,11 @@ const ContactsList = () => {
     return (
     <List>
       {filteredContacts.map(({ id , name, number }) => (
-        <li key={id}>
+        <ListItem key={id}>
           {name}: {number}
-          <button type="button" onClick={() => dispatch(deleteContact(id))}>Delete
-          </button>
-        </li>
+          <ListDelBtn type="button" onClick={() => dispatch(deleteContact(id))}>Delete{isLoading && <Loader />}
+          </ListDelBtn>
+        </ListItem>
       ))}
         </List>
   );

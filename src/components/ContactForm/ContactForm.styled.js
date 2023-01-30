@@ -29,8 +29,11 @@ export const FieldStyled = styled(Field)`
   box-shadow: 0 0 3px 1px;
 `;
 export const Button = styled.button`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   cursor: pointer;
-  width: 150px;
+  min-width: 170px;
   heigth: 25px;
   background-color: #fff000;
   border-radius: 12px;

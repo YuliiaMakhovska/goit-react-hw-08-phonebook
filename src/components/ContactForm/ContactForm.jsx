@@ -4,9 +4,9 @@ import { Report } from 'notiflix/build/notiflix-report-aio';
 import { FormStyled, FieldStyled, Label, Button } from './ContactForm.styled';
 import { Formik, ErrorMessage } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectItems } from 'redux/selectors';
+import { selectItems, selectIsLoading } from 'redux/selectors';
 import { addContacts } from 'redux/operations';
-// import Loader from 'components/Loader/Loader';
+import Loader from 'components/Loader/Loader';
 
 
 
@@ -21,6 +21,7 @@ const FormError = ({ name }) => {
 
 const ContactForm = () => {
   const contacts = useSelector(selectItems)
+  const isLoading = useSelector(selectIsLoading)
   const dispatch = useDispatch();
 
   const handleSubmit = (values, { resetForm }) => {
@@ -76,7 +77,7 @@ const ContactForm = () => {
           />
           <FormError FormError name="number" />
         </Label>
-        <Button type="submit">Add contact</Button>
+        <Button type="submit">Add contact {isLoading && <Loader /> }</Button>
       </FormStyled>
     </Formik>
   );

@@ -5,7 +5,7 @@ import { Container } from './Contacs.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from 'redux/operations';
-import Loader from 'components/Loader/Loader';
+// import Loader from 'components/Loader/Loader';
 import { selectIsLoading, selectError } from 'redux/selectors';
 
 const Contacts = () => {
@@ -22,7 +22,7 @@ const Contacts = () => {
       <ContactForm  /> 
       <h2>Contacts</h2>
         <Filter />
-      {isLoading && !error && <Loader />}
+      {isLoading && !error}
         <ContactsList />
     </Container>
     )
