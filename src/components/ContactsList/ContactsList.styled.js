@@ -24,7 +24,7 @@ export const ListItem = styled.li`
   justify-content: space-between;
 `;
 export const List = styled.ul`
-  gap: 15px;
+  gap: 10px;
   display: flex;
   flex-direction: column;
   padding-left: 20px;

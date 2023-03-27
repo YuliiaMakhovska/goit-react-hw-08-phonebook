@@ -8,7 +8,7 @@ export const NavContainer = styled.div`
 
 export const Link = styled(NavLink)`
   padding: 10px 15px;
-  min-width: 100px;
+  // min-width: 100px;
   border-radius: 2px;
   text-decoration: none;
   text-align: center;

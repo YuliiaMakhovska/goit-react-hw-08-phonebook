@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const AuthNavLink = styled(NavLink)`
   padding: 10px 15px;
-  min-width: 100px;
+  // min-width: 100px;
   border-radius: 2px;
   text-decoration: none;
   text-align: center;
